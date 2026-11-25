@@ -1,0 +1,515 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1794482393147
+  modified: 1794482393147
+  description: ""
+collection:
+  - url: localhost:3000/produtos
+    name: busca por categoria
+    meta:
+      id: req_23598716a00c42f399faf86ed78178dd
+      created: 1794483107545
+      modified: 1794483193290
+      isPrivate: false
+      description: ""
+      sortKey: -1794483107546
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/produtos
+    name: New Request
+    meta:
+      id: req_0f6e9845a0644d1882a298245aa10ff2
+      created: 1794483168351
+      modified: 1794483410061
+      isPrivate: false
+      description: ""
+      sortKey: -1794483168351
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"nome": "Cabo USB",
+        	"preco": 50,
+        	"estoque": 10,
+        	"categoria": "Acessorio"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - name: api array produtos
+    meta:
+      id: fld_5cda8461e24b473693c941f04313a2df
+      created: 1794484703283
+      modified: 1794484703283
+      sortKey: -1794484703283
+      description: ""
+    children:
+      - url: localhost:3000/produtos
+        name: listar todos os produtos
+        meta:
+          id: req_92eedf070c16402592136d9c7816f498
+          created: 1794487562424
+          modified: 1794509310966
+          isPrivate: false
+          description: ""
+          sortKey: -1794487562424
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produto/1
+        name: listar produto por ID
+        meta:
+          id: req_0b40a6fdbe334f798e089638409fcbc7
+          created: 1794487673953
+          modified: 1794492127280
+          isPrivate: false
+          description: ""
+          sortKey: -1794487673953
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos
+        name: incluir um novo produto
+        meta:
+          id: req_0d6ee234ed92416d9f9e817c9d1f0f08
+          created: 1794487729377
+          modified: 1794489136974
+          isPrivate: false
+          description: ""
+          sortKey: -1794487729377
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"nome": "cabo USB",
+            		"preco": 35,
+            		"estoque": 20,
+            		"categoria": "Acessorio"
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/categoria/Informatica
+        name: buscar por cat. informatica
+        meta:
+          id: req_f2c4708b12fa438e9a20a196a20f5f23
+          created: 1794489231400
+          modified: 1794489275202
+          isPrivate: false
+          description: ""
+          sortKey: -1794489231400
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/1
+        name: Altera um produto
+        meta:
+          id: req_26570665af9a48a6a66b90eed740f4bf
+          created: 1794492087287
+          modified: 1794494489206
+          isPrivate: false
+          description: ""
+          sortKey: -1794492087287
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+            	"nome": "Notebook ACER I7 pro",
+            	"preco": 4500,
+            	"estoque": 5,
+            	"categoria": "Informatica"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:3000/produtos/1
+        name: deletar produto
+        meta:
+          id: req_f1b47585e840415282566a0d0ab6aa73
+          created: 1794494546522
+          modified: 1795018381245
+          isPrivate: false
+          description: ""
+          sortKey: -1794494546522
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.1.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: API Clientes - Eduarda
+    meta:
+      id: fld_f3cf6bea65e649f486ca15d73f1a96ba
+      created: 1794509410701
+      modified: 1795021554641
+      sortKey: -1794509410701
+      description: ""
+    children:
+      - url: http://localhost:3000/clientes
+        name: " Listar todos "
+        meta:
+          id: req_b267e0a3c7a44c93b5ded1c09fbb06a5
+          created: 1794509416463
+          modified: 1795022380687
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Lista com todos os clientes cadastrados no array
+
+
+            ## Dados Enviados
+             {cliente: "Joao da silva", categoria: "vip", numerocli: "C123", faturamento: 150000.00 },
+                {cliente: "Vanessa Lopes", categoria: "ouro", numerocli: "C124", faturamento: 80000.00 },
+                {cliente: "Auguzo Pinheiro", categoria: "bronze", numerocli: "C125", faturamento: 17000.00 },
+                {cliente: "Poletto do Profundo", categoria: "diamante", numerocli: "C126", faturamento: 100000.00 },
+                {cliente: "Tupiguarana", categoria: "bronze", numerocli: "C127", faturamento: 17000.00 }
+
+            ## Respostas Esperadas
+
+            200 OK: Retorna o array JSON com todos os clientes
+          sortKey: -1794509416463
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/C123
+        name: Listar por numerocli
+        meta:
+          id: req_09a96231793c4fc6b263355df5c35d73
+          created: 1794509419085
+          modified: 1795022410378
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Busca um cliente utilizando o seu id (numerocli)
+
+
+            ## Dados Enviados
+
+            numerocli (ex: /clientes/C123)
+
+
+            ## Respostas Esperadas
+
+            200 OK: Retorna o JSON do cliente encontrado
+
+            404 Not Found: Retorna mensagem informando que o cliente não foi
+            encontrado
+          sortKey: -1794509419085
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/categoria/bronze
+        name: Listar por categoria
+        meta:
+          id: req_db434b32a6824e87acbde54f589b03a0
+          created: 1794509421126
+          modified: 1795022447053
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Filtra e lista todos os clientes que tem uma categoria específica
+            (ex: vip, ouro, bronze, diamante)
+
+
+            ## Dados Enviados
+
+            categoria (ex: /clientes/categoria/bronze)
+
+
+            ## Respostas Esperadas
+
+            200 OK: Retorna um array JSON com os clientes da categoria
+            solicitada
+
+            404 Not Found: Retorna mensagem informando que nenhum cliente foi
+            encontrado nessa categoria
+          sortKey: -1794509421126
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/maior-faturamento
+        name: " listar o maior faturamento"
+        meta:
+          id: req_96ec3c5a34124aa39cceedc3c435b152
+          created: 1794509422680
+          modified: 1795022095591
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Busca e retorna o cliente que possui o maior valor de faturamento
+            entre todos
+
+
+            ## Dados Enviados
+
+            ex: clientes/maior-faturamento
+
+
+            ## Respostas Esperadas
+
+            200 OK: Retorna o objeto JSON do cliente com o maior faturamento.
+
+            404 Not Found: Retorna mensagem avisando que não há nenhum cliente
+            cadastrado.
+          sortKey: -1794509422680
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/C123
+        name: Deletar um cliente
+        meta:
+          id: req_6ee44b9d80a3458384ff4b896647a21c
+          created: 1794509424717
+          modified: 1795022370843
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Remove um cliente do sistema com seu número id (numerocli)
+
+
+            ## Dados Enviados
+
+            numerocli (ex: /clientes/C123)
+
+
+            ## Respostas Esperadas
+
+            200 OK: Mensagem de sucesso e os dados do cliente removido
+
+            404 Not Found: Retorna mensagem que o cliente não foi encontrado
+            para exclusão
+          sortKey: -1794509424717
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes
+        name: "Incluir um novo "
+        meta:
+          id: req_46f9b803b8b74eb5a53cababf881d78c
+          created: 1794509429437
+          modified: 1795022242754
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Cadastra um novo cliente no sistema
+
+
+            ## Dados Enviados 
+
+            cliente (nome do cliente)
+
+            categoria (ex: vip, ouro, bronze, diamante)
+
+            numerocli (código id ex: C128)
+
+            faturamento (valor do faturamento)
+
+
+            ## Respostas Esperadas
+
+            201 Created: Retorna o JSON do cliente cadastrado
+
+            400 Bad Request: Retorna mensagem avisando que todos os campos são
+            obrigatórios
+          sortKey: -1794509429437
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"cliente": "Gustavo Gomes33",
+            		"categoria": "Diamante",
+            		"numerocli": "C155",
+            		"faturamento": 100000
+            	}
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/C123
+        name: "Alterar "
+        meta:
+          id: req_f872356124794e398ea8408ccafcf4c6
+          created: 1794509433816
+          modified: 1795022322268
+          isPrivate: false
+          description: >-
+            ## Objetivo
+
+            Atualiza os dados de um cliente que já existe pelo seu numerocli.
+
+
+            ## Dados Enviados
+
+            numerocli (ex: /clientes/C123)
+
+            Body em JSON com os novos dados: cliente, categoria, faturamento.
+
+
+            ## Respostas Esperadas
+
+            200 OK: Retorna o  JSON do cliente atualizado 
+
+            400 Bad Request: Retorna mensagem se os campos obrigatórios não
+            forem preenchidos
+
+            404 Not Found: Retorna mensagem que o cliente não foi encontrado
+          sortKey: -1794509433816
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "cliente": "Joao da Silva Atualizado",
+                "categoria": "diamante",
+                "faturamento": 250000
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1794482439258
+    modified: 1794482439258
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1794482439254
+    modified: 1794482439254
+    isPrivate: false
